@@ -24,4 +24,30 @@ Generally this avoids using any hard coded values, and relies heavily on the the
 
 ### Pages
 
-contain data, have page specific styling, and compose several layouts together often times passing in the data.
+contain or get Data to pass into components and layouts, have page specific themes and styling, as well as the bulk of the SEO meta tags.
+
+## Important files
+
+### pages/\_document
+
+This is the highest level component - i.e. the DOM. ['Next-JS/\_document'](https://nextjs.org/docs/advanced-features/custom-document)
+Here is where Google Analytics and Chakra's ColorModeScript are hooked up.
+
+### pages/\_app
+
+This is the second highest level component ['Next-JS/\_app'](https://nextjs.org/docs/advanced-features/custom-app)
+Here is where ChakrUI, Framer Motion, and NextJS all get glued together with global stylings.
+
+### theme/\*
+
+Before development begins a color pallete for the website should be chosen and stored here.
+Recommended: to use ['Canva'](https://www.canva.com/colors/color-palette-generator/) to find colors
+and ['Smart Swatch'](https://smart-swatch.netlify.app/) for the JS Swatch object.
+
+toHex()
+This util is used to add chakra defined colors to default components(custom SVG) and Framer Motion Components -
+because Framer Motion cannot annimate between strings and Hex values for colors: (i.e. gray.700 - #000000)
+
+### next-config.js
+
+This is where the environment variables are set
