@@ -10,10 +10,12 @@ export const links = [
 export * from "./Banner";
 import { StickyNavHeader } from "./StickyNavHeader";
 
-export const Header = (
-  <StickyNavHeader
-    color="white"
-    bgColor="rgba(0.4,0.4,0.4,0.4)"
-    links={links}
-  />
-);
+export const Header = () => {
+  return (
+    <StickyNavHeader
+      color="white"
+      bgColor="rgba(0.4,0.4,0.4,0.4)"
+      links={links}
+    />
+  );
+};
