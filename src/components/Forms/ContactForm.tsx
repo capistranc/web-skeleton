@@ -140,7 +140,9 @@ export const ContactForm = (props: HTMLChakraProps<"form">): JSX.Element => {
           <FormControl isInvalid={errors.email}>
             <InLineLabel bg={props.bg}>Email</InLineLabel>
             <InputGroup>
-              <InputLeftElement children={<EmailIcon color="gray.300" />} />
+              <InputLeftElement>
+                <EmailIcon color="gray.300" />
+              </InputLeftElement>
               <Input
                 id="email"
                 type="email"
@@ -172,10 +174,9 @@ export const ContactForm = (props: HTMLChakraProps<"form">): JSX.Element => {
           <FormControl isInvalid={errors.phone}>
             <InLineLabel bg={props.bg}>Phone</InLineLabel>
             <InputGroup>
-              <InputLeftElement
-                pointerEvents="none"
-                children={<PhoneIcon color="gray.300" />}
-              />
+              <InputLeftElement>
+                <PhoneIcon color="gray.300" />
+              </InputLeftElement>
               <Input
                 borderColor="gray.500"
                 id="phone"
