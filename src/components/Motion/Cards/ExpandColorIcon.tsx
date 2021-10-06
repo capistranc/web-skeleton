@@ -1,7 +1,7 @@
 import { MotionBox } from "..";
 import { Icon, Box, Text } from "@chakra-ui/react";
 import { FaArrowRight } from "react-icons/fa";
-import { toHex } from "../../../../../theme/colors";
+import { toHex } from "../../../theme/colors";
 import React, { useState } from "react";
 import NextLink from "next/link";
 import { useColorModeValue } from "@chakra-ui/color-mode";
