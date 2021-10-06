@@ -1,4 +1,4 @@
-import { Layout } from "../layouts";
+import { Layout } from "../layouts/Layout";
 
 export default function Services() {
   return (
