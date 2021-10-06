@@ -1,5 +1,7 @@
 Bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
+Initialize repo with `./init.sh`
+
 This is an opinionated Boilerplate that comes built in with
 
 - Typescript
