@@ -1,3 +1,5 @@
+import { MdPinInvoke } from "react-icons/md";
+
 export const Button = {
   // 1. We can update the base styles
   baseStyle: (props) => ({
@@ -21,6 +23,21 @@ export const Button = {
       color: "white",
       borderRadius: 0,
       bg: props.colorMode === "dark" ? "teal.700" : "teal.500",
+    }),
+    b1: (props) => ({
+      color: "pink.200",
+      bg: "white",
+      borderRadius: 0,
+    }),
+    b2: (props) => ({
+      borderRadius: 0,
+      color: "white",
+      bg: "pink.200",
+    }),
+    b3: (props) => ({
+      borderRadius: 0,
+      color: "white",
+      bg: "blue.500",
     }),
   },
 };

@@ -14,17 +14,29 @@ export function toHex(colorStr: string) {
 }
 
 export const colors: any = {
-  teal: {
-    50: "#e4f7fa",
-    100: "#cae1e7",
-    200: "#abccd3",
-    300: "#8cb7c1",
-    400: "#6ca1ae",
-    500: "#548895",
-    600: "#3f6a74",
-    700: "#2c4c54",
-    800: "#162e33",
-    900: "#001116",
+  pink: {
+    50: "#fef0e7",
+    100: "#ecd4c5",
+    200: "#deb8a1",
+    300: "#d09b7b",
+    400: "#c47e56",
+    500: "#aa643c",
+    600: "#854e2f",
+    700: "#5f3821",
+    800: "#3a2113",
+    900: "#170a00",
+  },
+  blue: {
+    50: "#ebefff",
+    100: "#c8cfec",
+    200: "#a5b0da",
+    300: "#8290ca",
+    400: "#5d70ba",
+    500: "#4557a1",
+    600: "#35437d",
+    700: "#25305a",
+    800: "#151d38",
+    900: "#040a18",
   },
   gray: {
     50: "#f8f0f2",
@@ -38,73 +50,68 @@ export const colors: any = {
     800: "#262626",
     900: "#120b0d",
   },
-  brown: {
-    50: "#ffeded",
-    100: "#e4d1cf",
-    200: "#cdb4b3",
-    300: "#b89694",
-    400: "#a27876",
-    500: "#895f5d",
-    600: "#6b4a47",
-    700: "#4e3533",
-    800: "#311f1e",
-    900: "#180803",
-  },
-  blue: {
-    50: "#e4f6fd",
-    100: "#c9dfe6",
-    200: "#acc9d2",
-    300: "#8db3be",
-    400: "#6f9dab",
-    500: "#558491",
-    600: "#416672",
-    700: "#2c4952",
-    800: "#172d33",
-    900: "#001215",
+  teal: {
+    50: "#e1f7fe",
+    100: "#c6dfea",
+    200: "#a7c8d6",
+    300: "#86b1c5",
+    400: "#669bb3",
+    500: "#4d8199",
+    600: "#3a6478",
+    700: "#274857",
+    800: "#122c36",
+    900: "#001019",
   },
 };
 
 const colorSchemes = {
   bg: {
     light: toHex("white"),
-    dark: toHex("teal.900"),
+    dark: toHex("blue.900"),
   },
   bg2: {
-    light: toHex("blue.400"),
-    dark: toHex("teal.800"),
+    light:
+      "linear-gradient(0deg, rgba(222,182,152,0.5) 0%, rgba(255,255,255,1) 50%, rgba(222,182,152,0.5) 100%);",
+    dark: toHex("blue.800"),
   },
   bg3: {
-    light: toHex("blue.50"),
-    dark: toHex("teal.900"),
-  },
-  bg4: {
-    light: toHex("white"),
-    dark: toHex("teal.800"),
-  },
-  border2: {
-    light: toHex("blue.200"),
-    dark: toHex("teal.600"),
-  },
-  border1: {
-    light: toHex("blue.500"),
-    dark: toHex("teal.700"),
+    light:
+      "linear-gradient(-45deg, rgba(222,182,152,0.5) 0%, rgba(255,255,255,1) 100%)",
+    dark: "linear-gradient(45deg, rgba(222,182,152,0.5) 0%, rgba(255,255,255,1) 100%",
   },
   fg: { light: toHex("gray.700"), dark: toHex("gray.100") },
   fg2: {
     light: toHex("white"),
     dark: toHex("gray.100"),
   },
-  heading: {
-    light: toHex("teal.600"),
-    dark: toHex("teal.600"),
+
+  h1: {
+    light: toHex("blue.700"),
+    dark: toHex("blue.700"),
   },
-  heading2: {
-    light: toHex("teal.600"),
-    dark: toHex("teal.600"),
+  h2: {
+    light: toHex("pink.200"),
+    dark: toHex("pink.200"),
   },
-  line: {
-    light: toHex("teal.500"),
-    dark: "rgba(255,255,255,0.8",
+  icon1: {
+    light: toHex("blue.600"),
+    dark: toHex("blue.600"),
+  },
+  icon2: {
+    light: toHex("blue.600"),
+    dark: toHex("blue.600"),
+  },
+  icon3: {
+    light: toHex("pink.200"),
+    dark: toHex("pink.200"),
+  },
+  overlayIcon: {
+    light: toHex("pink.200"),
+    dark: toHex("pink.200"),
+  },
+  border1: {
+    light: toHex("pink.200"),
+    dark: toHex("pink.200"),
   },
   bw: {
     light: toHex("black"),
