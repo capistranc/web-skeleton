@@ -12,26 +12,25 @@ import {
 } from "@chakra-ui/react";
 
 import { SocialMediaLinks, FooterHeading } from "./index";
-// import { Logo } from "../Logo";
+import { Logo } from "../Logo";
 import { Text, TextProps } from "@chakra-ui/layout";
 
 import { links } from "./index";
 
-export const Footer = () => {
+export const Footer = ({ ...props }) => {
   const { colorMode } = useColorMode();
-  return (
-    <FooterContent bg={theme.bg2[colorMode]} color={theme.fg2[colorMode]} />
-  );
-};
-
-export const FooterContent = ({ ...props }) => {
   return (
     <Stack
       align="center"
+      // position="absolute"
+      // pt="50"
+      // bottom="0"
       spacing="10"
       divider={<StackDivider />}
       py="12"
       px={{ base: "4", md: "8" }}
+      bg={theme.bg2[colorMode]}
+      color={theme.fg2[colorMode]}
       width="100%"
       {...props}
     >
@@ -42,9 +41,9 @@ export const FooterContent = ({ ...props }) => {
         justify="center"
       >
         <Box flex="1">
-          {/* <Logo /> */}
-          <Link href="mailto:capistranc@gmail.com">
-            WestEndDesigns@gmail.com
+          <Logo />
+          <Link href="mailto:contact@westendwebdesigns.com">
+            contact@westendwebdesigns.com
           </Link>
           <Spacer />
           <Link href="tel:714-932-9998">(949) 735 - 5619</Link>
@@ -82,9 +81,9 @@ export const LinkGrid = (props: SimpleGridProps) => (
         Code
       </FooterHeading>
       <Stack>
-        <Link>Mobile Designs</Link>
-        <Link>Web Applications</Link>
-        <Link>Full Stack Solutions</Link>
+        <Link as="h1">Mobile Designs</Link>
+        <Link as="h1">Web Applications</Link>
+        <Link as="h1">Full Stack Solutions</Link>
       </Stack>
     </Box>
     <Box minW="6em">
@@ -92,9 +91,9 @@ export const LinkGrid = (props: SimpleGridProps) => (
         Content
       </FooterHeading>
       <Stack>
-        <Link>Google Analytics</Link>
-        <Link>Content Management</Link>
-        <Link>Search Engine Optimization</Link>
+        <Link as="h1">Google Analytics</Link>
+        <Link as="h1">Content Management</Link>
+        <Link as="h1">Search Engine Optimization</Link>
       </Stack>
     </Box>
   </SimpleGrid>

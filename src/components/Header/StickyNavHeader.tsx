@@ -1,8 +1,9 @@
 import { NavBar } from "./NavBar";
 import { Flex, Box, Heading, Text } from "@chakra-ui/react";
 import React, { useRef, useEffect } from "react";
+import { links } from "./index";
 
-export const StickyNavHeader = ({ links, ...props }) => {
+export const StickyNavHeader = ({ active = null, ...props }) => {
   return (
     <Box
       top="0"
@@ -11,9 +12,11 @@ export const StickyNavHeader = ({ links, ...props }) => {
       zIndex="sticky"
       position="fixed"
       w="100%"
+      color="white"
+      bgColor="rgba(0.4,0.4,0.4,0.4)"
       {...props}
     >
-      <NavBar links={links} color={props.color}></NavBar>
+      <NavBar links={links} color={props.color} active={active}></NavBar>
     </Box>
   );
 };

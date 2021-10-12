@@ -5,21 +5,22 @@ import {
   ColorModeProvider,
   useColorMode,
 } from "@chakra-ui/react";
-import { DefaultSeo } from "next-seo";
+import customTheme from "../theme";
 import { AppProps, NextWebVitalsMetric } from "next/app";
 import Head from "next/head";
 import { Global, css } from "@emotion/react";
-import customTheme, { theme } from "../theme";
+import { prismLightTheme, prismDarkTheme } from "../theme/prism";
+import { theme } from "../theme";
+
+import "@fontsource/raleway/";
+import "@fontsource/oswald/";
+import "@fontsource/roboto/";
+import "@fontsource/roboto-condensed";
 import { AnimatePresence } from "framer-motion";
+import { DefaultSeo } from "next-seo";
 import { Header } from "../components/Header";
 import { Footer } from "../components/Footer";
-
-// import "@fontsource/raleway/";
-// import "@fontsource/oswald/";
-// import "@fontsource/roboto/";
-// import "@fontsource/roboto-condensed";
-
-// eslint-disable-next-line
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 declare const window: any;
 
 export function reportWebVitals({
@@ -43,6 +44,7 @@ const GlobalStyle = ({ children }) => {
     <>
       <Global
         styles={css`
+          ${colorMode === "light" ? prismLightTheme : prismDarkTheme};
           ::selection {
             background-color: #90cdf4;
             color: #fefefe;
@@ -64,6 +66,8 @@ const GlobalStyle = ({ children }) => {
             height: 100%;
             width: 100%;
             overflow: hidden;
+            min-height: 100vh;
+            position: relative;
 
             background: ${theme.bg[colorMode]};
           }
@@ -87,14 +91,14 @@ const App = ({ Component, pageProps, router }: AppProps) => {
         />
       </Head>
       <DefaultSeo
-        titleTemplate="%s - Web Skeleton"
+        titleTemplate="%s - West End Designs"
         openGraph={{
           type: "website",
           locale: "en_IE",
           url,
           description:
-            "The business website for Web Skeleton, a Next-JS boilerplate",
-          site_name: "Web Skeleton | web-skeleton.dev",
+            "Welcome to West End Designs: A Web Development company specializing in Mobile First web designs, SEO Optimization, and Full Stack Applications. Our websites are coded from scratch leveraging modern frameworks to statically render each web site. Contact us to have your website built today.",
+          site_name: "West End Designs | westendwebdesigns.com",
           images: [],
         }}
         canonical={url}
@@ -104,7 +108,7 @@ const App = ({ Component, pageProps, router }: AppProps) => {
           options={{ initialColorMode: "light", useSystemColorMode: false }}
         >
           <GlobalStyle>
-            <Header />
+            <Header active={router.route} />
 
             <AnimatePresence
               exitBeforeEnter
