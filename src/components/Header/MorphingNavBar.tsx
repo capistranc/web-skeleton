@@ -22,11 +22,6 @@ export const MorphingNavBar = ({ links, active = null, ...props }) => {
     }, 500); //Added a delay to give DOM time to render before looking for sentinel
 
     return () => {
-      // if (sentinels) {
-      //   for (let i = 0; i < sentinels.length; i++) {
-      //     observer.unobserve(sentinels[i]);
-      //   }
-      // }
       return clearTimeout(delay);
     };
   });
@@ -42,12 +37,14 @@ export const MorphingNavBar = ({ links, active = null, ...props }) => {
         position={isVisible ? "absolute" : "fixed"}
         color={isVisible ? "white" : "black"}
         bg={isVisible ? "transparent" : "white"}
+        boxShadow={isVisible ? "none" : "2xl"}
         {...props}
       >
         <NavBar
           links={links}
           color={props.color}
-          variant={isVisible ? "noLogo" : "default"}
+          variant="noLogo"
+          // variant={isVisible ? "noLogo" : "default"}
           active={active}
         ></NavBar>
       </Box>

@@ -1,16 +1,20 @@
 import { Box } from "@chakra-ui/react";
+import { useColorModeValue } from "@chakra-ui/color-mode";
 
 export const DiagonalDecoratorTopRightMinus = ({ ...props }) => {
   return (
     <Box
-      position="absolute"
-      top="-10rem"
-      right="0"
-      zIndex="1"
-      transform="skewY(5deg)"
-      h="10rem"
-      w="100%"
-      {...props}
+      _before={{
+        position: "absolute",
+        top: { base: "-12rem", xxl: "-20rem" },
+        right: "0",
+
+        transform: "skewY(4deg)",
+        h: { base: "12rem", xxl: "20rem" },
+        w: "100%",
+        content: `""`,
+        ...props,
+      }}
     />
   );
 };
@@ -18,14 +22,35 @@ export const DiagonalDecoratorTopRightMinus = ({ ...props }) => {
 export const DiagonalDecoratorBottomLeftMinus = ({ ...props }) => {
   return (
     <Box
-      position="absolute"
-      bottom="-10rem"
-      right="0"
-      transform="skewY(5deg)"
-      h="10rem"
-      zIndex="1"
-      w="100%"
-      {...props}
+      _before={{
+        position: "absolute",
+        bottom: { base: "-12rem", xxl: "-20rem" },
+        right: "0",
+        transform: "skewY(4deg)",
+        h: { base: "12rem", xxl: "20rem" },
+
+        w: "100%",
+        content: `""`,
+        ...props,
+      }}
+    />
+  );
+};
+
+export const DiagonalDecoratorBottomRight = ({ ...props }) => {
+  return (
+    <Box
+      _before={{
+        position: "absolute",
+        bottom: { base: "-6rem", xxl: "-10rem" },
+        right: "0",
+        transform: "skewY(-4deg)",
+        h: { base: "12rem", xxl: "20rem" },
+
+        w: "100%",
+        content: `""`,
+        ...props,
+      }}
     />
   );
 };
@@ -33,14 +58,17 @@ export const DiagonalDecoratorBottomLeftMinus = ({ ...props }) => {
 export const DiagonalDecoratorTopLeft = ({ ...props }) => {
   return (
     <Box
-      position="absolute"
-      top="-10rem"
-      right="0"
-      zIndex="1"
-      transform="skewY(-5deg)"
-      h="10rem"
-      w="100%"
-      {...props}
+      _before={{
+        position: "absolute",
+        top: { base: "-12rem", xxl: "-20rem" },
+        right: "0",
+
+        transform: "skewY(-4deg)",
+        h: { base: "12rem", xxl: "20rem" },
+        w: "100%",
+        content: `""`,
+        ...props,
+      }}
     />
   );
 };
@@ -48,14 +76,17 @@ export const DiagonalDecoratorTopLeft = ({ ...props }) => {
 export const DiagonalDecoratorTopRight = ({ ...props }) => {
   return (
     <Box
-      position="absolute"
-      top="-0rem"
-      right="0"
-      zIndex="1"
-      transform="skewY(-5deg)"
-      h="10rem"
-      w="100%"
-      {...props}
+      _before={{
+        position: "absolute",
+        top: "-0rem",
+        right: "0",
+
+        transform: "skewY(-4deg)",
+        h: { base: "12rem", xxl: "20rem" },
+        w: "100%",
+        content: `""`,
+        ...props,
+      }}
     />
   );
 };
